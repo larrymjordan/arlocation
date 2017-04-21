@@ -1,5 +1,5 @@
 # Arlocation
-
+An augmented reality based web application built with angular 2, threejs, and argonjs.
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
 
 ## Development server
