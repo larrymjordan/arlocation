@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import * as THREE from 'three';
+import * as Argon from '@argonjs/argon';
 
 @Component({
   selector: 'app-root',
