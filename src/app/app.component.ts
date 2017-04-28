@@ -16,6 +16,26 @@ export class AppComponent implements OnInit {
   cube: THREE.Mesh;
 
   ngOnInit() {
+    // initialize Argon
+    let app = Argon.init();
+    app.context.setDefaultReferenceFrame(app.context.localOriginEastUpSouth);
+
+    // initialize THREE
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera();
+    const userLocation = new THREE.Object3D;
+    scene.add(camera);
+    scene.add(userLocation);
+    const renderer = new THREE.WebGLRenderer({ 
+        alpha: true, 
+        logarithmicDepthBuffer: true
+    });
+    renderer.setPixelRatio(window.devicePixelRatio);
+    app.view.element.appendChild(renderer.domElement);
+    //this.initThreeScene();
+  }
+
+  initThreeScene() {
     this.scene = new THREE.Scene();
     this.camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
 
